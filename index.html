@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>calculator</title>
+	<style type="text/css">
+		h3{
+			margin-left: 50px;
+			font-size: 50px;
+			font-family: cursive;
+			font-style: italic;
+		}
+		.mdiv{
+			height: 100vh;
+			width: 100vw;
+			position: fixed;
+			align-items: center;
+			justify-content: center;
+			top: 0px;
+			left: 0px;
+			background-color:darkblue;
+			display: flex;
+/*		background-image: url(https://graphicriver.img.customer.envatousercontent.com/files/86232890/Calculator%20a%20background590.jpg?auto=compress%2Cformat&q=80&fit=crop&crop=top&max-h=8000&max-w=590&s=c0882fa83dab39e4597f4d2f55bd9642);*/
+			background-repeat: no-repeat;
+			background-size: cover;
+
+
+		}
+		.container{
+            align-items: center;
+			justify-content: center;
+			display: flex;
+			height: 600px;
+			width: 400px;
+			background-color:blue;
+			border-radius: 50px;
+			box-shadow: 0px 0px 20px skyblue;
+			margin-left: 200px;
+			
+		}
+		input{
+
+			font-size: 25px;
+			height: 75px;
+			width: 80px;
+			background-color: black;
+			color: white;
+			margin: 4px;
+			border-radius: 10px;
+			
+		}
+		.inpt{
+			text-align: right;
+            font-size: 30px;
+			background-color: ghostwhite;
+			width: 340px;
+			height: 90px;
+			border-radius: 0px;
+			color: black;
+		}
+		.equal{
+			width: 171px;
+			background-color: orange;
+		}
+		.buttons{
+			padding-right: -10px;
+
+		}
+		.opr{
+			background-color:orange;
+		}
+	</style>
+</head>
+<body>
+<div class="mdiv">
+	 <h3>A Simple and Stylish<br>Calculator.</h3>
+	<div class="container">
+		<form>
+			<div>
+			<input class="inpt" type="text" name="ip" disabled>
+		    </div>
+		    <br>
+		<div class="buttons">
+			<div>
+		<input type="button"  value="C" onclick="ip.value=' '"  >
+		<input type="button"  value="AC" onclick="ip.value=' '"  />
+		<input type="button"  value="/" onclick="ip.value+='/'" class="opr" />
+		<input type="button" value="%" onclick="ip.value+='%'"class="opr" />
+	    </div>
+		<div>
+		<input type="button"  value="9" onclick="ip.value+='9'" />
+		<input type="button"  value="8" onclick="ip.value+='8'" />
+		<input type="button"  value="7" onclick="ip.value+='7'" />
+		<input type="button" value="+" onclick="ip.value+='+' "class="opr">
+	    </div>
+	    <div>
+		<input type="button"  value="6" onclick="ip.value+='6'" />
+		<input type="button"  value="5" onclick="ip.value+='5'" />
+		<input type="button"  value="4" onclick="ip.value+='4'" />
+		<input type="button" value="-" onclick="ip.value+='-'" class="opr">
+	    </div>
+	    <div>
+		<input type="button"  value="3" onclick="ip.value+='3'" />
+		<input type="button"  value="2" onclick="ip.value+='2'" />
+		<input type="button"  value="1" onclick="ip.value+='1'" />
+		<input type="button" value="" onclick="ip.value+=''" class="opr">
+	    </div>
+	    <div>
+		<input type="button"  value="0" onclick="ip.value+='0'" >
+		<input type="button"  value="." onclick="ip.value+='.'" >
+		<input type="button" value="=" onclick="ip.value=eval(ip.value)" class="equal" >		
+	    </div>
+		</div>
+		</form>
+
+	</div>
+</div>
+</body>
+</html>
